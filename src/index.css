@@ -1,0 +1,104 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #fff5f4;
+}
+.title{
+  font-size: 20px;
+  margin-top: 60px;
+  text-align: center;
+  line-height: 10px;
+  color: #005e6d;
+}
+.title h1{
+  font-weight: bold;
+}
+.sub{ padding-bottom: 30px;
+line-height: 30px;}
+ 
+.gallery {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-container {
+  perspective: 1000px;
+  padding-bottom: 40px;
+  padding-left: 50px;
+}
+
+.card {
+  box-shadow: 8px 15px 17px -5px rgba(0,0,0,0.49);
+-webkit-box-shadow: 8px 15px 17px -5px rgba(0,0,0,0.49);
+-moz-box-shadow: 8px 15px 17px -5px rgba(0,0,0,0.49);
+  position: relative;
+  width: 250px; 
+  height: 300px;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease-in-out;
+}
+
+.front,
+.back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; 
+  height: 100%; 
+  
+  backface-visibility: hidden;
+}
+
+.front {
+  border-radius:0px 20px;
+  background-color: #005e6d;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff5f4;
+  transform: rotateY(0deg);
+}
+
+.front img {
+  width: 90%;
+  height: auto;
+  margin-top: 10px;
+}
+
+.front h3 {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.back {
+  border-radius:20px 0px;
+  background-color: #005e6d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff5f4;
+  transform: rotateY(180deg);
+  text-align: center;
+}
+
+.back p{
+   padding: 15px;
+}
+
+.card-container:hover .card {
+  transform: rotateY(180deg);
+}
+
+.pic {
+ max-width: 100%;
+  border-radius: 6px;
+}
